@@ -1,0 +1,75 @@
+# AI2EO — Generative Engine Optimization Service
+
+> We optimize websites for AI search engines (ChatGPT, Perplexity, Google AI Overviews, Claude, Gemini).
+
+## About
+
+AI2EO is a service that optimizes websites for AI search engines. Unlike traditional SEO, it targets AI models citing and using your content.
+
+## Services
+
+### Mini Analysis — $199
+- GEO-SEO audit (60 seconds)
+- 3 growth leak detection
+- Hero rewrite suggestion
+- CTA suggestion
+- 1-page report
+
+### 48-Hour Growth Sprint — $499
+- Everything in Mini Analysis
+- llms.txt creation
+- Schema markup implementation
+- robots.txt update
+- Content optimization
+- 5 outbound message templates
+- 30-day content plan
+
+### Full Execution — $999
+- Everything in Growth Sprint
+- Landing page rewrite
+- Blog/article creation (3 pieces)
+- Sitemap.xml creation
+- Detailed GEO report
+- Google Search Console setup
+- Monthly tracking (1 month free)
+
+### Monthly Consulting — $2,999/mo
+- Everything in Full Execution
+- Weekly GEO-SEO report
+- Monthly content production (4 blogs)
+- Monthly brand mention tracking
+- AI search engine ranking report
+- Priority support
+
+## Key Metrics
+
+- AI-referred traffic growth: +527% year-over-year
+- AI traffic conversion rate: 4.4x higher than organic
+- Gartner: Search traffic will drop 50% by 2028
+- Brand mention correlation: 3x stronger than backlinks
+- Marketers investing in GEO: Only 23%
+
+## Guaranteed
+
+"No AI visibility, no payment" — We work with guaranteed results. If your visibility on AI search engines doesn't increase, you get a full refund.
+
+## Contact
+
+- Web: https://www.ai2eo.com
+
+## Technical Details
+
+### What is GEO?
+GEO (Generative Engine Optimization) is the process of optimizing websites for AI search engines. It provides structured data, entity-focused content, and AI crawler access so models can cite your content accurately.
+
+### SEO vs GEO
+- SEO: Google ranking, keyword-focused, backlinks
+- GEO: AI citation, entity-focused, structured data, llms.txt
+
+### Techniques Used
+- Schema.org markup (JSON-LD)
+- llms.txt file
+- robots.txt AI crawler optimization
+- Citability scoring
+- Brand mention tracking
+- AI crawler access analysis

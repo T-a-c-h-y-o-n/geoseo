@@ -2025,7 +2025,6 @@ h1, h2, h3, h4 { font-family: var(--font-heading); }
             id="auditEmail"
             placeholder="E-posta adresiniz"
             aria-label="E-posta adresi"
-            required
             data-lang="tr"
           >
           <input
@@ -2035,7 +2034,6 @@ h1, h2, h3, h4 { font-family: var(--font-heading); }
             id="auditEmailEn"
             placeholder="Your email address"
             aria-label="Email address"
-            required
             data-lang="en"
           >
         </div>
@@ -2049,7 +2047,6 @@ h1, h2, h3, h4 { font-family: var(--font-heading); }
               id="auditUrl"
               placeholder="siteniz.com"
               aria-label="Web sitesi"
-              required
               data-lang="tr"
             >
             <input
@@ -2059,7 +2056,6 @@ h1, h2, h3, h4 { font-family: var(--font-heading); }
               id="auditUrlEn"
               placeholder="yoursite.com"
               aria-label="Website"
-              required
               data-lang="en"
             >
           </div>
@@ -2225,22 +2221,30 @@ const stepTexts = ['Site taraması tamamlandı', 'AI erişimi analiz edildi', 'Y
 auditForm.addEventListener('submit', (e) => {
   e.preventDefault();
 
-  const email = (document.getElementById('auditEmail') || document.getElementById('auditEmailEn')).value.trim();
-  const url = (document.getElementById('auditUrl') || document.getElementById('auditUrlEn')).value.trim();
+  const lang = document.documentElement.getAttribute('data-lang') || 'tr';
+  const nameEl = lang === 'en' ? document.getElementById('auditNameEn') : document.getElementById('auditName');
+  const emailEl = lang === 'en' ? document.getElementById('auditEmailEn') : document.getElementById('auditEmail');
+  const urlEl = lang === 'en' ? document.getElementById('auditUrlEn') : document.getElementById('auditUrl');
+
+  const email = emailEl.value.trim();
+  const url = urlEl.value.trim();
   if (!email || !url) {
-    if (!email) (document.getElementById('auditEmail') || document.getElementById('auditEmailEn')).focus();
-    else (document.getElementById('auditUrl') || document.getElementById('auditUrlEn')).focus();
+    if (!email) emailEl.focus();
+    else urlEl.focus();
     return;
   }
 
   // Prepend https:// to website URL
-  const urlInput = document.getElementById('auditUrl') || document.getElementById('auditUrlEn');
-  if (!urlInput.value.startsWith('http')) {
-    urlInput.value = 'https://' + urlInput.value;
+  if (!urlEl.value.startsWith('http')) {
+    urlEl.value = 'https://' + urlEl.value;
   }
 
-  // Submit to Formspree
-  const formData = new FormData(auditForm);
+  // Submit to Formspree (only active-language fields)
+  const formData = new FormData();
+  formData.append('isim', nameEl.value.trim());
+  formData.append('email', email);
+  formData.append('website', urlEl.value);
+  formData.append('dil', lang);
   fetch('https://formspree.io/f/mdarrrgg', {
     method: 'POST',
     body: formData,

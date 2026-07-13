@@ -1,75 +1,65 @@
-# AI2EO — Generative Engine Optimization Service
+# ai2eo — GEO-SEO (Generative Engine Optimization) Service
 
-> We optimize websites for AI search engines (ChatGPT, Perplexity, Google AI Overviews, Claude, Gemini).
+> ai2eo, web sitelerini ChatGPT, Perplexity, Claude ve Google AI Overviews için optimize eden bir GEO-SEO ajansıdır. Geleneksel SEO'dan farklı olarak AI modellerinin içeriğinizi alıntılamasını ve kullanmasını hedefler.
 
 ## About
 
-AI2EO is a service that optimizes websites for AI search engines. Unlike traditional SEO, it targets AI models citing and using your content.
+ai2eo, işletmelerin AI arama motorlarında görünür olmasını sağlayan GEO-SEO (Generative Engine Optimization) hizmetleri sunar. Şema işaretleme (schema markup), llms.txt oluşturma, AI crawler erişim optimizasyonu ve citability (alıntılanabilirlik) skorlaması ile markanızın AI tarafından doğru şekilde referans alınmasını sağlar.
 
 ## Services
 
-### Mini Analysis — $199
-- GEO-SEO audit (60 seconds)
-- 3 growth leak detection
-- Hero rewrite suggestion
-- CTA suggestion
-- 1-page report
+### GEO Strateji Paketi — 8.000₺
+- Kapsamlı GEO-SEO denetimi (60 saniye)
+- Büyüme sızıntısı tespiti (3 leak)
+- AI erişim analizi
+- llms.txt oluşturma
+- Şema işaretlemesi önerileri
+- robots.txt önerileri
+- İçerik optimizasyon önerileri
+- 30 günlük içerik planı
 
-### 48-Hour Growth Sprint — $499
-- Everything in Mini Analysis
-- llms.txt creation
-- Schema markup implementation
-- robots.txt update
-- Content optimization
-- 5 outbound message templates
-- 30-day content plan
+### GEO Tam Dönüşüm — 11.000₺
+- GEO Strateji Paketi'ndeki her şey
+- Blog/makale oluşturma (3 adet)
+- İçerik stratejisi dokümanı
+- sitemap.xml oluşturma
+- Detaylı GEO raporu
+- Aylık takip ve optimizasyon
 
-### Full Execution — $999
-- Everything in Growth Sprint
-- Landing page rewrite
-- Blog/article creation (3 pieces)
-- Sitemap.xml creation
-- Detailed GEO report
-- Google Search Console setup
-- Monthly tracking (1 month free)
+## Key Information
 
-### Monthly Consulting — $2,999/mo
-- Everything in Full Execution
-- Weekly GEO-SEO report
-- Monthly content production (4 blogs)
-- Monthly brand mention tracking
-- AI search engine ranking report
-- Priority support
+- Hedef: Web sitelerini AI arama motorlarında (ChatGPT, Perplexity, Claude, Google AI Overviews) görünür kılmak
+- Garanti: "AI'da çıkmazsan ödeme yok" — 15 soruluk test seti ile ölçülen AI görünürlük skorunda artış olmazsa ücret iade edilir
+- Süre: Strateji Paketi 48 saat, Tam Dönüşüm 5-7 iş günü
+- Dil: Türkçe ve İngilizce hizmet
 
-## Key Metrics
+## Why GEO-SEO Matters (2026)
 
-- AI-referred traffic growth: +527% year-over-year
-- AI traffic conversion rate: 4.4x higher than organic
-- Gartner: Search traffic will drop 50% by 2028
-- Brand mention correlation: 3x stronger than backlinks
-- Marketers investing in GEO: Only 23%
-
-## Guaranteed
-
-"No AI visibility, no payment" — We work with guaranteed results. If your visibility on AI search engines doesn't increase, you get a full refund.
+- Gartner: 2028'e kadar arama trafiği %50 düşecek
+- AI-referred trafik büyümesi: yılda +%527
+- AI trafik dönüşüm oranı: organik trafikten 4.4x daha yüksek
+- Marka bahsi (brand mention), backlink'ten 3x daha güçlü korelasyon
+- GEO'ya yatırım yapan marketer'lar: sadece %23
 
 ## Contact
 
-- Web: https://www.ai2eo.com
+- Web: https://ai2eo.com/
+- Hizmetler: https://ai2eo.com/#hizmetler
+- SSS: https://ai2eo.com/#sss
 
 ## Technical Details
 
-### What is GEO?
-GEO (Generative Engine Optimization) is the process of optimizing websites for AI search engines. It provides structured data, entity-focused content, and AI crawler access so models can cite your content accurately.
+### What is GEO-SEO?
+GEO (Generative Engine Optimization), web sitelerini AI arama motorları için optimize etme sürecidir. Yapılandırılmış veri, entity-focused içerik ve AI crawler erişimi sağlayarak modellerin içeriğinizi doğru şekilde alıntılamasını sağlar.
 
 ### SEO vs GEO
-- SEO: Google ranking, keyword-focused, backlinks
-- GEO: AI citation, entity-focused, structured data, llms.txt
+- SEO: Google sıralaması, anahtar kelime odaklı, backlink
+- GEO: AI alıntısı, entity-focused, yapılandırılmış veri, llms.txt
 
 ### Techniques Used
-- Schema.org markup (JSON-LD)
+- Schema.org markup (JSON-LD: Organization, Service, WebSite, FAQPage, Article)
 - llms.txt file
-- robots.txt AI crawler optimization
+- robots.txt AI crawler optimization (GPTBot, PerplexityBot, ClaudeBot, Google-Extended)
 - Citability scoring
 - Brand mention tracking
 - AI crawler access analysis

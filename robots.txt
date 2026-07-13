@@ -75,7 +75,7 @@ User-agent: DotBot
 Disallow: /
 
 # Sitemaps
-Sitemap: https://www.ai2eo.com/sitemap.xml
+Sitemap: https://ai2eo.com/sitemap.xml
 
 # LLMs
 Llms-txt: https://www.ai2eo.com/llms.txt

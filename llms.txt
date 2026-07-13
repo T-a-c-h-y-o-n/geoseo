@@ -8,7 +8,7 @@ ai2eo, işletmelerin AI arama motorlarında görünür olmasını sağlayan GEO-
 
 ## Services
 
-### GEO Strateji Paketi — 8.000₺
+### GEO Strateji Paketi — 12.000₺
 - Kapsamlı GEO-SEO denetimi (60 saniye)
 - Büyüme sızıntısı tespiti (3 leak)
 - AI erişim analizi
@@ -18,7 +18,7 @@ ai2eo, işletmelerin AI arama motorlarında görünür olmasını sağlayan GEO-
 - İçerik optimizasyon önerileri
 - 30 günlük içerik planı
 
-### GEO Tam Dönüşüm — 11.000₺
+### GEO Tam Dönüşüm — 15.000₺
 - GEO Strateji Paketi'ndeki her şey
 - Blog/makale oluşturma (3 adet)
 - İçerik stratejisi dokümanı

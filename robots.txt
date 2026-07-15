@@ -78,4 +78,4 @@ Disallow: /
 Sitemap: https://ai2eo.com/sitemap.xml
 
 # LLMs
-Llms-txt: https://www.ai2eo.com/llms.txt
+Llms-txt: https://ai2eo.com/llms.txt

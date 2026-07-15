@@ -31,6 +31,17 @@
   }
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://ai2eo.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ai2eo.com/blog/" },
+    { "@type": "ListItem", "position": 3, "name": "AI Görünürlük", "item": "https://ai2eo.com/blog/02-ai-gorunurluk.html" }
+  ]
+}
+</script>
 <style>
 
 /* Skip to content */
@@ -1559,20 +1570,13 @@ main{padding-top:100px}
 
   <h2><span data-lang="tr">Problem: AI Sizi Görmüyor</span><span data-lang="en">Problem: AI Doesn't See You</span></h2>
   <p><span data-lang="tr">Geleneksel SEO backlink ve anahtar kelimeye odaklanır. Ancak ChatGPT, Perplexity ve Google AI Overviews içeriği farklı şekilde değerlendirir:</span><span data-lang="en">Traditional SEO focuses on backlinks and keywords. But ChatGPT, Perplexity, and Google AI Overviews evaluate content differently:</span></p>
-  <div class="card"><h3><span data-lang="tr">İçerik erişilemez</span><span data-lang="en">Content is inaccessible</span></h3><p><span data-lang="tr"><code>robots.txt</code> AI botlarını engelliyor olabilir.</span><span data-lang="en">Your <code>robots.txt</code> may be blocking AI bots.</span></p></div>
-  <div class="card"><h3><span data-lang="tr">Yapı anlaşılmaz</span><span data-lang="en">Structure is unclear</span></h3><p><span data-lang="tr">Şema işaretleme (schema) eksikse AI neyin önemli olduğunu bilemez.</span><span data-lang="en">If schema markup is missing, AI cannot tell what matters.</span></p></div>
-  <div class="card"><h3><span data-lang="tr">Bahis yok</span><span data-lang="en">No brand mention</span></h3><p><span data-lang="tr">AI modelleri marka adınızıdaki bahsi (brand mention) referans alır; içeriğiniz başka yerde alıntılanmıyorsa görünmezsiniz.</span><span data-lang="en">AI models reference the brand mention of your name; if your content isn't cited elsewhere, you stay invisible.</span></p></div>
-  <div class="card"><h3><span data-lang="tr">llms.txt yok</span><span data-lang="en">No llms.txt</span></h3><p><span data-lang="tr">AI botlarına sitenizin haritasını anlatan dosya eksikse içeriğiniz düşük önceliklidir.</span><span data-lang="en">Without the file that maps your site for AI bots, your content gets low priority.</span></p></div>
+  <div class="card"><h3><span data-lang="tr">İçerik erişilemez</span><span data-lang="en">Content is inaccessible</span></h3><p><span data-lang="tr">Sitenizin teknik yapısı AI'ın girişini engelliyor olabilir.</span><span data-lang="en">Your site's technical setup may be blocking AI's entry.</span></p></div>
+  <div class="card"><h3><span data-lang="tr">Yapı anlaşılmaz</span><span data-lang="en">Structure is unclear</span></h3><p><span data-lang="tr">Siteniz AI'ın neyin önemli olduğunu anlayamayacağı formatta olabilir.</span><span data-lang="en">Your site may be in a format AI cannot tell what matters.</span></p></div>
+  <div class="card"><h3><span data-lang="tr">Bahis yok</span><span data-lang="en">No brand mention</span></h3><p><span data-lang="tr">Marka adınız siteniz dışında referans alınmıyorsa AI sizi görmez.</span><span data-lang="en">If your brand name isn't referenced outside your site, AI doesn't see you.</span></p></div>
+  <div class="card"><h3><span data-lang="tr">Site haritası yok</span><span data-lang="en">No site map for AI</span></h3><p><span data-lang="tr">AI'a sitenizin yapısını anlatan bir rehber yoksa içeriğiniz düşük önceliklidir.</span><span data-lang="en">Without a guide telling AI your site's structure, your content gets low priority.</span></p></div>
 
   <h2><span data-lang="tr">Çözüm: GEO-SEO ile Yapılandırılmış Görünürlük</span><span data-lang="en">Solution: Structured Visibility with GEO-SEO</span></h2>
-  <h3><span data-lang="tr">1. AI Crawler Erişimi</span><span data-lang="en">1. AI Crawler Access</span></h3>
-  <p><span data-lang="tr"><code>robots.txt</code>'i GPTBot, PerplexityBot, ClaudeBot ve Google-Extended için açarız. Kötü botları engelleriz.</span><span data-lang="en">We open <code>robots.txt</code> for GPTBot, PerplexityBot, ClaudeBot, and Google-Extended, and block bad bots.</span></p>
-  <h3><span data-lang="tr">2. llms.txt Rehberi</span><span data-lang="en">2. llms.txt Guide</span></h3>
-  <p><span data-lang="tr">AI botlarına sitenizin hizmet, içerik ve iletişim yapısını anlatan <code>llms.txt</code> dosyası oluştururuz.</span><span data-lang="en">We create an <code>llms.txt</code> file that explains your site's services, content, and contact structure to AI bots.</span></p>
-  <h3><span data-lang="tr">3. Şema İşaretleme (Schema)</span><span data-lang="en">3. Schema Markup</span></h3>
-  <p><span data-lang="tr">Organization, Service, WebSite, FAQPage ve Article şemalarını JSON-LD olarak uygularız.</span><span data-lang="en">We implement Organization, Service, WebSite, FAQPage, and Article schemas as JSON-LD.</span></p>
-  <h3><span data-lang="tr">4. Citability ve Marka Bahsi</span><span data-lang="en">4. Citability and Brand Mentions</span></h3>
-  <p><span data-lang="tr">Sayfaya alıntılanabilir tanım pasajları ekler, blog içeriği ile derinlik yaratır, off-page bahis stratejisi kurarız.</span><span data-lang="en">We add citable definition passages to the page, build depth through blog content, and set up an off-page mention strategy.</span></p>
+  <p><span data-lang="tr">GEO-SEO, yukarıdaki dört problemi bir dizi teknik ve içeriksel müdahale ile çözer. Her müdahale bir sonrakine temel oluşturur ve birlikte uygulandığında AI'ın sizi referans alması sürdürülebilir hale gelir.</span><span data-lang="en">GEO-SEO solves the four problems above with a set of technical and content-level interventions. Each intervention lays the groundwork for the next, and applied together, makes AI's reference to your brand sustainable.</span></p>
 
   <h2><span data-lang="tr">Sonuç: AI'da Görünür Olursunuz</span><span data-lang="en">Result: You Become Visible in AI</span></h2>
   <p><span data-lang="tr">Doğru GEO-SEO uygulandığında ChatGPT, Perplexity ve Gemini'de markanız referans alınır. AI-referred trafik organik trafikten <strong>4.4x daha yüksek dönüşüm</strong> sağlar.</span><span data-lang="en">With proper GEO-SEO, your brand is referenced on ChatGPT, Perplexity, and Gemini. AI-referred traffic delivers <strong>4.4x higher conversion</strong> than organic traffic.</span></p>
@@ -1581,7 +1585,7 @@ main{padding-top:100px}
 
   <div class="cta">
     <h2 style="color:#fff;margin-top:0"><span data-lang="tr">Ücretsiz GEO-SEO Denetimi</span><span data-lang="en">Free GEO-SEO Audit</span></h2>
-    <p style="color:#eaf"><span data-lang="tr">60 saniyede AI görünürlük skorunuzu öğrenin.</span><span data-lang="en">Learn your AI visibility score in 60 seconds.</span></p>
+    <p style="color:#eaf"><span data-lang="tr">Birkaç dakikada AI görünürlük skorunuzu öğrenin.</span><span data-lang="en">Learn your AI visibility score in a few minutes.</span></p>
     <a href="../index.html#audit"><span data-lang="tr">Hemen Denetim Yaptır</span><span data-lang="en">Get Your Audit Now</span></a>
   </div>
 </main>

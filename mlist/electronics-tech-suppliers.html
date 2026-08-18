@@ -117,9 +117,9 @@
         <p class="sub">Counted from the real CSV — states, outreach scores, and domain health for the 150 electronics &amp; tech suppliers.</p>
       </div>
       <div class="charts rv">
-        <figure class="chart"><img src="assets/electronics_states.png" alt="Electronics and technology suppliers: California 17, Florida 11, Colorado 7, New Jersey 6"><figcaption class="mono" style="font-size:11px;color:var(--slate);margin-top:8px;letter-spacing:.06em">STATE ROSTER</figcaption></figure>
-        <figure class="chart"><img src="assets/electronics_outreach.png" alt="Outreach-readiness score distribution: 64 companies score 80 to 100, 22 score 60 to 79, 64 under 60."><figcaption class="mono" style="font-size:11px;color:var(--slate);margin-top:8px;letter-spacing:.06em">OUTREACH SCORE</figcaption></figure>
-        <figure class="chart"><img src="assets/electronics_domains.png" alt="Electronics and technology suppliers: 119 live domains, 26 unknown, 5 dead."><figcaption class="mono" style="font-size:11px;color:var(--slate);margin-top:8px;letter-spacing:.06em">DOMAIN HEALTH</figcaption></figure>
+        <figure class="chart"><img class="lb" src="assets/electronics_states.png" alt="Electronics and technology suppliers: California 17, Florida 11, Colorado 7, New Jersey 6"><figcaption class="mono" style="font-size:11px;color:var(--slate);margin-top:8px;letter-spacing:.06em">STATE ROSTER</figcaption></figure>
+        <figure class="chart"><img class="lb" src="assets/electronics_outreach.png" alt="Outreach-readiness score distribution: 64 companies score 80 to 100, 22 score 60 to 79, 64 under 60."><figcaption class="mono" style="font-size:11px;color:var(--slate);margin-top:8px;letter-spacing:.06em">OUTREACH SCORE</figcaption></figure>
+        <figure class="chart"><img class="lb" src="assets/electronics_domains.png" alt="Electronics and technology suppliers: 119 live domains, 26 unknown, 5 dead."><figcaption class="mono" style="font-size:11px;color:var(--slate);margin-top:8px;letter-spacing:.06em">DOMAIN HEALTH</figcaption></figure>
       </div>
     </div>
   </section>
@@ -256,6 +256,14 @@
   </div>
 </footer>
 
+<div id="lightbox" class="lightbox" aria-hidden="true">
+  <button type="button" id="lb-close" class="lb-close" aria-label="Close image">✕</button>
+  <figure>
+    <img id="lb-img" alt="">
+    <figcaption id="lb-cap"></figcaption>
+  </figure>
+</div>
+
 <script>
 (function(){
   "use strict";
@@ -292,6 +300,38 @@
     reveals.forEach(function(el){ rv.observe(el); });
   } else {
     reveals.forEach(function(el){ el.classList.add("in"); });
+  }
+
+  /* Lightbox for chart images */
+  var lb = document.getElementById("lightbox");
+  var lbImg = document.getElementById("lb-img");
+  var lbCap = document.getElementById("lb-cap");
+  function openLb(src, cap){
+    if (!lb) return;
+    lbImg.src = src;
+    if (lbCap){ lbCap.textContent = cap || ""; }
+    lb.classList.add("open");
+    document.body.classList.add("lb-open");
+  }
+  function closeLb(){
+    if (!lb) return;
+    lb.classList.remove("open");
+    document.body.classList.remove("lb-open");
+    lbImg.src = "";
+  }
+  document.querySelectorAll("figure img.lb").forEach(function(img){
+    img.addEventListener("click", function(){
+      openLb(img.currentSrc || img.src, img.alt);
+    });
+  });
+  if (lb){
+    lb.addEventListener("click", function(e){
+      if (e.target === lb || e.target === lbImg) closeLb();
+    });
+    document.getElementById("lb-close").addEventListener("click", closeLb);
+    document.addEventListener("keydown", function(e){
+      if (e.key === "Escape") closeLb();
+    });
   }
 })();
 </script>

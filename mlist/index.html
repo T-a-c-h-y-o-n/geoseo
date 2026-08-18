@@ -303,15 +303,15 @@
       </div>
       <div class="mktgrid">
         <figure class="mkt">
-          <img src="assets/01_endustri_dagilimi.png" alt="U.S. suppliers by industry, top 15 industries" loading="lazy">
+          <img class="lb" src="assets/01_endustri_dagilimi.png" alt="U.S. suppliers by industry, top 15 industries" loading="lazy">
           <figcaption>Top 15 industries in the file — retail and wholesale lead the list, with beauty, food, and electronics close behind.</figcaption>
         </figure>
         <figure class="mkt">
-          <img src="assets/06_outreach_score.png" alt="Outreach readiness score distribution, 0 to 100" loading="lazy">
+          <img class="lb" src="assets/06_outreach_score.png" alt="Outreach readiness score distribution, 0 to 100" loading="lazy">
           <figcaption>Outreach readiness scored 0–100 per record. Most companies cluster in the upper half — the tiers you actually mail first.</figcaption>
         </figure>
         <figure class="mkt">
-          <img src="assets/07_dogrulama_sonuc.png" alt="Domain and email verification results" loading="lazy">
+          <img class="lb" src="assets/07_dogrulama_sonuc.png" alt="Domain and email verification results" loading="lazy">
           <figcaption>Verification split: the large majority of domains respond, and MX-valid emails dominate the file. Dead leads are flagged, not hidden.</figcaption>
         </figure>
       </div>
@@ -382,6 +382,14 @@
   </div>
 </footer>
 
+<div id="lightbox" class="lightbox" aria-hidden="true">
+  <button type="button" id="lb-close" class="lb-close" aria-label="Close image">✕</button>
+  <figure>
+    <img id="lb-img" alt="">
+    <figcaption id="lb-cap"></figcaption>
+  </figure>
+</div>
+
 <script>
 (function(){
   "use strict";
@@ -436,6 +444,38 @@
       }
     });
   });
+
+  /* Lightbox for chart images */
+  var lb = document.getElementById("lightbox");
+  var lbImg = document.getElementById("lb-img");
+  var lbCap = document.getElementById("lb-cap");
+  function openLb(src, cap){
+    if (!lb) return;
+    lbImg.src = src;
+    if (lbCap){ lbCap.textContent = cap || ""; }
+    lb.classList.add("open");
+    document.body.classList.add("lb-open");
+  }
+  function closeLb(){
+    if (!lb) return;
+    lb.classList.remove("open");
+    document.body.classList.remove("lb-open");
+    lbImg.src = "";
+  }
+  document.querySelectorAll("figure img.lb").forEach(function(img){
+    img.addEventListener("click", function(){
+      openLb(img.currentSrc || img.src, img.alt);
+    });
+  });
+  if (lb){
+    lb.addEventListener("click", function(e){
+      if (e.target === lb || e.target === lbImg) closeLb();
+    });
+    document.getElementById("lb-close").addEventListener("click", closeLb);
+    document.addEventListener("keydown", function(e){
+      if (e.key === "Escape") closeLb();
+    });
+  }
 })();
 </script>
 

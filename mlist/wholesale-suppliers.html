@@ -4,8 +4,22 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>if(!location.pathname.endsWith("/")&&!location.pathname.endsWith(".html"))history.replaceState(null,"",location.pathname+"/")</script>
-<title>347 U.S. Wholesale & Distribution Suppliers — Verified List | Merchants List</title>
+<title>347 U.S. Wholesale &amp; Distribution Suppliers — Verified List | Merchants List</title>
 <meta name="description" content="347 U.S.-based wholesale & distribution suppliers for dropshipping and Amazon FBA: 281 live domains, 182 MX-valid emails, 158 companies scored 80+ for outreach. Real records, verified July 2026.">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="keywords" content="US wholesale suppliers, wholesale distribution suppliers, wholesale dropshipping, wholesale supplier list, verified US suppliers">
+<link rel="canonical" href="https://ai2eo.com/mlist/wholesale-suppliers.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Merchants List">
+<meta property="og:title" content="347 U.S. Wholesale &amp; Distribution Suppliers — Verified List">
+<meta property="og:description" content="347 U.S.-based wholesale & distribution suppliers for dropshipping and Amazon FBA: live domains, MX-valid emails, outreach scores. Verified July 2026.">
+<meta property="og:url" content="https://ai2eo.com/mlist/wholesale-suppliers.html">
+<meta property="og:image" content="https://ai2eo.com/mlist/assets/tablo.png">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="347 U.S. Wholesale &amp; Distribution Suppliers — Verified List">
+<meta name="twitter:description" content="347 verified U.S. wholesale & distribution suppliers for dropshipping and Amazon FBA. Live domains, valid emails, outreach scores.">
+<meta name="twitter:image" content="https://ai2eo.com/mlist/assets/tablo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -39,16 +53,25 @@
       <a class="btn btn-primary" href="https://tachyon80.gumroad.com/l/atvkft" aria-label="Buy the full list for 47 dollars">$47 · Buy the list</a>
     </div>
   </div>
-  <div class="wrap seo-nav" aria-label="Industries">
-    <span>Industry files:</span>
-    <a href="retail-suppliers.html">Retail</a><span class="sep">·</span>
-    <a class="cur" href="wholesale-suppliers.html">Wholesale</a><span class="sep">·</span>
-    <a href="food-beverage-suppliers.html">Food</a><span class="sep">·</span>
-    <a href="beauty-cosmetics-suppliers.html">Beauty</a><span class="sep">·</span>
-    <a href="sports-outdoor-suppliers.html">Sports</a><span class="sep">·</span>
-    <a href="electronics-tech-suppliers.html">Electronics</a><span class="sep">·</span>
-    <a href="apparel-fashion-suppliers.html">Apparel</a><span class="sep">·</span>
-    <a href="pet-suppliers.html">Pet</a>
+  <div class="wrap seo-nav" aria-label="Site navigation">
+    <div class="nav-ctl">
+      <a class="nav-label" href="index.html">Main</a>
+      <div class="drop" id="nav-drop">
+        <button type="button" class="drop-toggle" aria-haspopup="true" aria-expanded="false" id="nav-industries">Industry files <span class="arrow">▼</span></button>
+        <nav class="drop-menu" aria-label="Industry files">
+          <a href="retail-suppliers.html">Retail &amp; E-commerce</a>
+          <a class="cur" href="wholesale-suppliers.html">Wholesale &amp; Distribution</a>
+          <a href="food-beverage-suppliers.html">Food &amp; Beverage</a>
+          <a href="beauty-cosmetics-suppliers.html">Beauty &amp; Cosmetics</a>
+          <a href="sports-outdoor-suppliers.html">Sports &amp; Outdoor</a>
+          <a href="electronics-tech-suppliers.html">Electronics &amp; Tech</a>
+          <a href="apparel-fashion-suppliers.html">Apparel &amp; Fashion</a>
+          <a href="pet-suppliers.html">Pet Products</a>
+        </nav>
+      </div>
+      <a href="blog.html">Research</a>
+      <a href="compare.html">Compare</a>
+    </div>
   </div>
 </header>
 
@@ -268,6 +291,35 @@
 (function(){
   "use strict";
   var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var drops = document.querySelectorAll(".drop");
+  drops.forEach(function(d){
+    var toggle = d.querySelector(".drop-toggle");
+    if (!toggle) return;
+    toggle.addEventListener("click", function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      var open = d.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+  });
+  document.addEventListener("click", function(e){
+    if (!e.target.closest(".drop")){
+      drops.forEach(function(d){
+        d.classList.remove("open");
+        var t = d.querySelector(".drop-toggle");
+        if (t) t.setAttribute("aria-expanded", "false");
+      });
+    }
+  });
+  document.addEventListener("keydown", function(e){
+    if (e.key === "Escape"){
+      drops.forEach(function(d){
+        d.classList.remove("open");
+        var t = d.querySelector(".drop-toggle");
+        if (t) t.setAttribute("aria-expanded", "false");
+      });
+    }
+  });
   var counters = document.querySelectorAll(".ticket .c");
   if (counters.length && !reduce) {
     var fmt = new Intl.NumberFormat("en-US");

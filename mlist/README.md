@@ -1,12 +1,19 @@
 # Merchants List — Landing Page
 
-Single-file HTML landing page for **Merchants List**, a verified database of 2,238 U.S. dropshipping and Amazon FBA suppliers.
+Static HTML site for **Merchants List**, a verified database of 2,238 U.S. dropshipping and Amazon FBA suppliers.
 
-No build step, no dependencies — one `landing_page.html` file with inline CSS and vanilla JS.
+No build step, no dependencies — plain HTML/CSS/JS.
+
+## Pages
+
+- `index.html` — home / landing
+- `blog.html` — 2026 U.S. supplier research report (SEO)
+- `compare.html` — SaleHoo vs Worldwide Brands vs Merchants List
+- `*-suppliers.html` — 8 industry pages (retail, wholesale, food, beauty, sports, electronics, apparel, pet)
 
 ## Run locally
 
-Just open `landing_page.html` in a browser. Or serve it:
+Serve the folder (relative asset paths):
 
 ```bash
 python3 -m http.server 8000

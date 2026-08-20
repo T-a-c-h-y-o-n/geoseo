@@ -79,8 +79,37 @@
   .seo-nav{display:flex;flex-wrap:wrap;gap:4px 18px;align-items:center;font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--hash);padding:12px 0}
   .seo-nav a{color:var(--slate);text-decoration:none}
   .seo-nav a:hover{color:var(--stamp)}
-  .seo-nav a.cur{color:var(--stamp);text-decoration:underline;text-underline-offset:3px}
-  .seo-nav .sep{opacity:.5}
+  .seo-nav a.cur{color:var(--stamp);text-decoration:underline;text-underline-offset:3px;pointer-events:none;cursor:default}
+  .seo-nav .nav-ctl{display:flex;flex-wrap:wrap;gap:4px 18px;align-items:center}
+  .seo-nav .nav-label{color:var(--hash);text-decoration:none}
+  .seo-nav a.nav-label:hover{color:var(--stamp)}
+
+  /* dropdown menu */
+  .drop{position:relative}
+  .drop::after{
+    content:"";position:absolute;left:-14px;top:100%;width:240px;height:12px;
+  }
+  .drop-toggle{
+    display:inline-flex;align-items:center;gap:6px;cursor:pointer;user-select:none;
+    color:var(--slate);border:none;background:none;font:inherit;letter-spacing:.1em;text-transform:uppercase;padding:0;
+  }
+  .drop-toggle .arrow{font-size:8px;opacity:.7;transition:transform .15s}
+  .drop-toggle:hover,.drop-toggle[aria-expanded="true"]{color:var(--stamp)}
+  .drop-menu{
+    position:absolute;left:-14px;top:calc(100% + 10px);z-index:60;
+    min-width:240px;max-height:min(70vh,460px);overflow-y:auto;
+    background:var(--panel);border:2px solid var(--carbon);
+    border-radius:var(--r-card);box-shadow:6px 6px 0 rgba(20,26,33,.1);
+    padding:8px 0;display:flex;flex-direction:column;
+    opacity:0;visibility:hidden;transform:translateY(-6px);
+    transition:opacity .14s ease,transform .14s ease,visibility .14s;
+  }
+  .drop-menu a{padding:8px 18px;color:var(--slate);white-space:nowrap}
+  .drop-menu a:hover{color:var(--stamp);background:rgba(166,47,40,.06)}
+  .drop-menu a.cur{color:var(--stamp);font-weight:600;pointer-events:none;cursor:default}
+  .drop-menu a.cur:hover{background:transparent}
+  .drop.open .drop-menu,.drop:hover .drop-menu,.drop:focus-within .drop-menu{opacity:1;visibility:visible;transform:translateY(0)}
+  .drop.open .arrow,.drop:hover .arrow{transform:rotate(180deg)}
 
   /* ---------- HERO ---------- */
   .hero{border-bottom:3px solid var(--carbon)}
@@ -361,4 +390,5 @@
     .tally .strip{grid-template-columns:1fr}
     .masthead-meta{display:none}
     .final{padding:38px 22px}
+    .drop-menu{left:-6px;min-width:200px;max-height:min(70vh,460px)}
   }

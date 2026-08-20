@@ -319,6 +319,33 @@
   .lightbox .lb-close:hover{background:var(--stamp);border-color:var(--stamp)}
   body.lb-open{overflow:hidden}
 
+  /* ---------- TRY MODAL ---------- */
+  .try-modal{position:fixed;inset:0;z-index:1100;display:none;align-items:center;justify-content:center;padding:24px}
+  .try-modal.open{display:flex}
+  .try-backdrop{position:absolute;inset:0;background:rgba(14,18,23,.72);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+  .try-dialog{position:relative;background:var(--panel);border:3px solid var(--carbon);border-radius:var(--r-card);
+    box-shadow:10px 10px 0 rgba(20,26,33,.2);width:100%;max-width:440px;padding:34px 30px;text-align:left}
+  .try-close{position:absolute;top:14px;right:14px;width:34px;height:34px;border-radius:50%;
+    border:1px solid var(--rule-strong);background:transparent;color:var(--slate);font-size:18px;line-height:1;cursor:pointer;
+    display:flex;align-items:center;justify-content:center}
+  .try-close:hover{background:var(--stamp);border-color:var(--stamp);color:#fff}
+  .try-kicker{font-family:var(--font-mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--stamp);margin:0 0 8px}
+  .try-dialog h3{font-family:var(--font-display);font-weight:800;font-size:30px;text-transform:uppercase;letter-spacing:.01em;color:var(--carbon);margin:0 0 10px;line-height:1.05}
+  .try-sub{font-size:15px;color:var(--ink);line-height:1.6;margin:0 0 22px}
+  .try-label{display:block;font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--slate);margin:0 0 8px}
+  .try-input{width:100%;font-family:var(--font-mono);font-size:15px;padding:12px 14px;border:2px solid var(--carbon);
+    border-radius:var(--r-tag);background:#fff;color:var(--carbon);margin-bottom:10px}
+  .try-input:focus{outline:none;border-color:var(--stamp)}
+  .try-error{font-family:var(--font-mono);font-size:12px;color:var(--stamp);margin:0 0 10px}
+  .try-submit{width:100%;margin-bottom:8px}
+  .try-fine{font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--hash);margin:0;text-align:center}
+  .try-success{text-align:center;padding:10px 0}
+  .try-success-title{font-family:var(--font-display);font-weight:800;font-size:26px;text-transform:uppercase;color:var(--carbon);margin:0 0 8px}
+  .try-success-sub{font-size:14px;color:var(--ink);margin:0}
+  body.try-open{overflow:hidden}
+  .btn-ghost{border-color:var(--carbon);color:var(--carbon);background:transparent}
+  .btn-ghost:hover{background:rgba(20,26,33,.06)}
+
 
   /* ---------- FAQ ---------- */
   .faq{padding-bottom:54px}

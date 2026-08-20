@@ -75,6 +75,7 @@
     <div class="masthead-cta">
       <span class="masthead-meta">One-time · no subscription</span>
       <a class="btn btn-primary" href="https://tachyon80.gumroad.com/l/atvkft" aria-label="Buy the full list for 47 dollars">$47 · Buy the list</a>
+      <a class="btn btn-ghost" href="#" onclick="return openTryModal()">Try before you buy</a>
     </div>
   </div>
   <div class="wrap seo-nav" aria-label="Site navigation">
@@ -208,10 +209,84 @@
   </figure>
 </div>
 
+</div>
+
+<div id="try-modal" class="try-modal" aria-hidden="true">
+  <div class="try-backdrop" data-close></div>
+  <div class="try-dialog" role="dialog" aria-modal="true" aria-labelledby="try-title">
+    <button type="button" class="try-close" data-close aria-label="Close">✕</button>
+    <p class="try-kicker">Free sample · no charge</p>
+    <h3 id="try-title">Try before you buy</h3>
+    <p class="try-sub">Enter your email and get 26 verified U.S. supplier leads — 2 from each of 13 industries. Emails masked, every domain live, every lead real.</p>
+    <form id="try-form" action="https://formspree.io/f/xdenbzpa" method="POST" novalidate>
+      <label class="try-label" for="try-email">Email address</label>
+      <input class="try-input" type="email" id="try-email" name="email" placeholder="you@example.com" required>
+      <div class="try-error" role="alert" hidden>Enter a valid email address.</div>
+      <button type="submit" class="btn btn-primary try-submit">Get the sample</button>
+      <p class="try-fine">26 leads · CSV · no spam</p>
+    </form>
+    <div class="try-success" hidden>
+      <p class="try-success-title">Check your inbox.</p>
+      <p class="try-success-sub">Your sample is downloading. We also emailed you a copy.</p>
+    </div>
+  </div>
+
+
 <script>
 (function(){
   "use strict";
   var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  /* Try before you buy modal */
+  var tryModal = document.getElementById("try-modal");
+  var tryForm = document.getElementById("try-form");
+  var tryEmail = document.getElementById("try-email");
+  var tryError = document.querySelector(".try-error");
+  var trySuccess = document.querySelector(".try-success");
+
+  window.openTryModal = function(){
+    if (!tryModal) return false;
+    tryModal.classList.add("open");
+    document.body.classList.add("try-open");
+    tryModal.setAttribute("aria-hidden", "false");
+    if (tryEmail) setTimeout(function(){ tryEmail.focus(); }, 60);
+    return false;
+  };
+  window.closeTryModal = function(){
+    if (!tryModal) return;
+    tryModal.classList.remove("open");
+    document.body.classList.remove("try-open");
+    tryModal.setAttribute("aria-hidden", "true");
+  };
+  if (tryModal){
+    tryModal.querySelectorAll("[data-close]").forEach(function(el){
+      el.addEventListener("click", closeTryModal);
+    });
+  }
+  if (tryForm){
+    tryForm.addEventListener("submit", function(e){
+      e.preventDefault();
+      var val = tryEmail ? tryEmail.value.trim() : "";
+      if (!val || val.indexOf("@") < 1){
+        if (tryError) tryError.hidden = false;
+        return;
+      }
+      if (tryError) tryError.hidden = true;
+      fetch(tryForm.getAttribute("action"), {
+        method: "POST",
+        body: new FormData(tryForm),
+        headers: { "Accept": "application/json" }
+      }).then(function(){
+        window.location.href = "sample.csv";
+        tryForm.style.display = "none";
+        if (trySuccess) trySuccess.hidden = false;
+      }).catch(function(){
+        window.location.href = "sample.csv";
+        tryForm.style.display = "none";
+        if (trySuccess) trySuccess.hidden = false;
+      });
+    });
+  }
+
   var drops = document.querySelectorAll(".drop");
   drops.forEach(function(d){
     var toggle = d.querySelector(".drop-toggle");
